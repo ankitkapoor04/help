@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> {% block title %}
+Home
+    {% endblock %}</title>
+</head>
+<body>
+  {% block content %}
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Sigin</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Sigup</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Contact</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+    </li>
+  </ul>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+    <img src="https://images.unsplash.com/photo-1711475312495-705611a9d52d?q=80&w=1769&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="800px" />
+  </div>
+  <div class="row">
+    <div class="card" style="width: 18rem;">
+      <img src="https://images.unsplash.com/photo-1711470053377-bdd52fdba484?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Rented gf</h5>
+        <p class="card-text">complete your dreams</p>
+        <label for="exampleInputEmail1" class="form-label" >Email address</label>
+              <button id="minus" onclick="funm()">-</button>
+              <p id="txt">0</p>
+              <button id="plus" onclick="funp()">+</button>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<script>
+  let i=0;
+  let val=document.querySelector("#txt");
+  function funm(){
+     i--;
+     val.innerText=i;
+    }
+  function funp(){
+     i++;
+     val.innerText=i;
+    }
+
+  </script>
+  {% endblock %}
+  
+</body>
+</html>
